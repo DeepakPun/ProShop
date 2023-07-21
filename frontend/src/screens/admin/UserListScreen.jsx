@@ -67,6 +67,7 @@ const UserListScreen = () => {
                       <FaEdit />
                     </Button>
                   </LinkContainer>
+                  {loadingDelete && <Loader />}
                   <Button
                     variant='danger'
                     className='btn-sm'

@@ -8,6 +8,7 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import logo from '../assets/logo.png';
 import SearchBox from './SearchBox';
+import { toast } from 'react-toastify';
 
 const Header = () => {
   const { cartItems } = useSelector(state => state.cart);
@@ -23,8 +24,10 @@ const Header = () => {
       await logoutApiCall().unwrap();
       dispatch(logout());
       navigate('/login');
+      toast.success('Logged out successfully');
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      toast.error(error?.data?.message || error.error);
     }
   };
   // console.log(cartItems);

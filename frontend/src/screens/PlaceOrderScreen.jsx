@@ -36,14 +36,14 @@ const PlaceOrderScreen = () => {
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
       }).unwrap();
-      console.log('res: ', res);
+      // console.log('res: ', res);
       dispatch(clearCartItems());
       navigate(`/order/${res._id}`);
     } catch (error) {
       toast.error(error);
     }
   };
-  console.log('Cart Items: ', cart.cartItems);
+  // console.log('Cart Items: ', cart.cartItems);
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
