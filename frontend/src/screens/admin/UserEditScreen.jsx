@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import {
   useGetUserDetailsQuery,
   useUpdateUserMutation,
-} from '../../slices/usersApiSlice';
+} from '../../slices/usersApislice';
 
 const UserEditScreen = () => {
   const { id: userId } = useParams();
