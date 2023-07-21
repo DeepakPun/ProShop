@@ -2,7 +2,7 @@ import { USERS_URL } from '../constants';
 import { apiSlice } from './apiSlice';
 // console.log(apiSlice);
 
-export const usersApiSlice = apiSlice.injectEndpoints({
+export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: builder => ({
     login: builder.mutation({
       query: data => ({
@@ -70,6 +70,6 @@ export const {
   useDeleteUserMutation,
   useGetUserDetailsQuery,
   useUpdateUserMutation,
-} = usersApiSlice;
+} = userApiSlice;
 // console.log(useGetProductsQuery);
 // console.log(useGetProductDetailsQuery);
