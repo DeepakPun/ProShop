@@ -25,7 +25,6 @@ const ProfileScreen = () => {
     useProfileMutation();
 
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
-  // console.log(orders);
 
   useEffect(() => {
     if (userInfo) {
@@ -57,7 +56,7 @@ const ProfileScreen = () => {
       }
     }
   };
-
+  // console.log(orders.length);
   return (
     <Row>
       <Col md={3}>
@@ -127,6 +126,7 @@ const ProfileScreen = () => {
               </tr>
             </thead>
             <tbody>
+              {/* {orders.length} */}
               {orders.map(order => (
                 <tr key={order._id}>
                   <LinkContainer
